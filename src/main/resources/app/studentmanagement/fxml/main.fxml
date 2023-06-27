@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" styleClass="main" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.studentmanagement.controller.AddStudentController">
+   <top>
+      <Pane prefHeight="68.0" prefWidth="750.0" stylesheets="@../style/main.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" graphicTextGap="8.0" prefHeight="69.0" prefWidth="750.0" style="-fx-font-size: 24;" styleClass="header" stylesheets="@../style/main.css" text="Student Management System">
+               <graphic>
+                  <SVGPath content="M20,8h0L14,2.74a3,3,0,0,0-4,0L4,8a3,3,0,0,0-1,2.26V19a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3V10.25A3,3,0,0,0,20,8ZM14,20H10V15a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1Zm5-1a1,1,0,0,1-1,1H16V15a3,3,0,0,0-3-3H11a3,3,0,0,0-3,3v5H6a1,1,0,0,1-1-1V10.25a1,1,0,0,1,.34-.75l6-5.25a1,1,0,0,1,1.32,0l6,5.25a1,1,0,0,1,.34.75Z" fill="WHITE" strokeLineJoin="ROUND" strokeWidth="2.0">
+                     <effect>
+                        <Blend />
+                     </effect></SVGPath>
+               </graphic>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../style/main.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="List Students">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="391.0" prefWidth="750.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="392.0" prefWidth="753.0">
+                                 <children>
+                                    <TableView fx:id="tbData" editable="true" prefHeight="376.0" prefWidth="736.0" tableMenuButtonVisible="true">
+                                      <columns>
+                                        <TableColumn fx:id="noCol" prefWidth="53.0" text="No." />
+                                        <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+                                          <TableColumn fx:id="fullNameCol" prefWidth="243.0" text="FullName" />
+                                          <TableColumn fx:id="birthYearCol" prefWidth="122.0" text="BirthYear" />
+                                          <TableColumn fx:id="placeCol" prefWidth="133.0" text="Place" />
+                                          <TableColumn fx:id="funcCol" prefWidth="94.0" text="Function" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+            </content>
+               <graphic>
+                  <SVGPath content="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z" fill="WHITE" />
+               </graphic>
+          </Tab>
+          <Tab text="Add Student">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="table-view">
+                     <children>
+                        <Group layoutX="239.0" layoutY="45.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="7.0" text="FullName" />
+                              <TextField fx:id="fullNameTextField" layoutX="86.0" layoutY="2.0" prefHeight="30.0" prefWidth="212.0" promptText="Enter fullname" />
+                           </children>
+                        </Group>
+                        <Group layoutX="239.0" layoutY="107.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="7.0" text="Birth Year" />
+                              <DatePicker fx:id="birthDayPicker" layoutX="86.0" promptText="MM-DD-YYYY" />
+                           </children>
+                        </Group>
+                        <Group layoutX="239.0" layoutY="165.0">
+                           <children>
+                              <Label layoutX="2.0" layoutY="7.0" text="HomeTown" />
+                              <TextField fx:id="homeTownTextField" layoutX="85.0" prefHeight="30.0" prefWidth="218.0" promptText="Enter hometown" />
+                           </children>
+                        </Group>
+                        <Button fx:id="btn" layoutX="340.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleSave" styleClass="btn" text="Save" />
+                        <Label fx:id="messageLabel" layoutX="243.0" layoutY="289.0" prefHeight="47.0" prefWidth="265.0" />
+                     </children></AnchorPane>
+            </content>
+               <graphic>
+                  <SVGPath content="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z" fill="WHITE" />
+               </graphic>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

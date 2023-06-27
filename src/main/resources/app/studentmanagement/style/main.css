@@ -1,0 +1,63 @@
+* {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.main {
+    -fx-background-color: #8696FE;
+    -fx-font-size: 24px;
+}
+.header {
+    -fx-background-color: #4942E4;
+}
+.tab-header-background{
+    -fx-background-color: #8696FE;
+}
+.tab {
+    -fx-padding: 5px 10px;
+    -fx-background-color: #8696FE;
+}
+.tab:selected:top {
+    -fx-background-color: #11009E;
+}
+.table-view{
+    -fx-background-color: #8696FE;
+    -fx-text-fill: #11009E;
+}
+
+.column-header{
+    -fx-background-color: #C4B0FF;
+}
+
+.btn {
+    -fx-padding: 10px 20px;
+    -fx-background-color: #11009E;
+}
+.text-field{
+    -fx-text-fill: #11009E;
+}
+
+.btn:hover{
+    -fx-cursor:hand ;
+}
+
+.cell:filled {
+    -fx-text-fill: #11009E;
+    -fx-text-alignment: center;
+    -fx-content-display: center;
+    -fx-alignment: center;
+}
+.cell:selected {
+    -fx-text-fill: #11009E;
+}
+.cell:empty {
+    -fx-text-fill: #11009E;
+}
+
+.datepicker .table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #000000;
+}
